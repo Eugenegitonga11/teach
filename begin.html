@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Links and Images Practice</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f0f0f5;
+    }
+    h1 {
+      color: #333399;
+    }
+    h2 {
+      color: #5a5ac7;
+    }
+    p {
+      color: #333;
+    }
+    a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Practice with HTML Links and Images</h1>
+
+  <h2>HTML Links</h2>
+  <p>Links allow users to navigate to other pages or websites. You can create a link using the <code>&lt;a&gt;</code> tag with the <code>href</code> attribute:</p>
+  <pre>
+    &lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;
+  </pre>
+  <p>Example link: <a href="image.html" target="_blank">Visit Example</a></p>
+
+  <h2>Linking to Other Sections</h2>
+  <p>You can also link to specific sections within the same page using anchor links:</p>
+  <pre>
+    &lt;a href="#images"&gt;Jump to Images Section&lt;/a&gt;
+  </pre>
+  <p><a href="#images">Jump to Images Section</a></p>
+
+  <h2>HTML Images</h2>
+  <p>Image link: <a href="https://example.com" target="_blank">Visit Image</a></p>
+  <p id="images">Images can be embedded in a web page using the <code>&lt;img&gt;</code> tag with the <code>src</code> attribute specifying the image URL:</p>
+  <pre>
+    &lt;img src="https://via.placeholder.com/150" alt="Placeholder Image"&gt;
+  </pre>
+  <p>Example image:</p>
+  <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+  
+
+  <h2>Image Links</h2>
+  <p>You can make images clickable by wrapping them in an <code>&lt;a&gt;</code> tag:</p>
+  <pre>
+    &lt;a href="https://example.com"&gt;
+      &lt;img src="https://via.placeholder.com/150" alt="Clickable Image"&gt;
+    &lt;/a&gt;
+  </pre>
+  <p>Example:</p>
+  <a href="https://example.com" target="_blank">
+    <img src="https://via.placeholder.com/150" alt="Clickable Image">
+  </a>
+
+</body>
+
+</html>
