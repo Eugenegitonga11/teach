@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web developement</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background 0.5s, color 0.5s;
+        }
+        .hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>BASICS OF WEB DEVELOPMENT</h1>
+    <div id="info-container"></div>
+
+    <script>
+        const info = [
+            { title: "Web Development", text: "It is the creation of an application that works over the internet i.e. websites. Web development is typically broken down into 3 core areas: Frontend, Backend, Full Stack Development." },
+            { title: "Frontend Development", text: "The Face of the Web. The part of a website where the user interacts directly is termed as front end. This involves designing the structure, layout, and behavior of the website It is also referred to as the ‘client side’ of the application" },
+            { title: "Backend Development", text: "Backend development focuses on server-side logic, databases, and application functionality using programming languages like Python, PHP, Node.js, and frameworks like Django and Express." },
+            { title: "Database Management", text: "Database management involves designing, implementing, and maintaining databases to store and manage website data efficiently using tools like MySQL, PostgreSQL, and MongoDB." },
+            {title: "Git", text: " is a distributed version control system that helps track changes in code, manage versions, and collaborate with others locally or remotely. It is a command-line tool installed on your computer."},
+            {title: "Github", text: " is a cloud-based platform that provides hosting for Git repositories, along with additional features like issue tracking, pull requests, and collaboration tools. It allows teams to work on Git repositories online."}
+        ];
+        let index = 0;
+        let changedBackground = false;
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                if (!changedBackground) {
+                    document.body.style.backgroundColor = "#333";
+                    document.body.style.color = "white";
+                    changedBackground = true;
+                }
+                
+                if (index < info.length) {
+                    const div = document.createElement("div");
+                    const h1 = document.createElement("h1");
+                    const p = document.createElement("p");
+                    h1.textContent = info[index].title;
+                    p.textContent = info[index].text;
+                    div.appendChild(h1);
+                    div.appendChild(p);
+                    div.classList.add("hidden");
+                    document.getElementById("info-container").appendChild(div);
+                    
+                    setTimeout(() => {
+                        div.classList.add("visible");
+                    }, 50);
+                    
+                    index++;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
